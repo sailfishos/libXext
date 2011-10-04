@@ -1,0 +1,22 @@
+Name: libXext
+Summary: X.Org X11 libXext runtime library
+Version: 1.1.1
+Release: 1
+Group: System/Libraries
+License: MIT
+URL: http://www.x.org/
+Sources:
+    - http://cgit.freedesktop.org/xorg/lib/libXext/snapshot/%{name}-%{version}.tar.bz2
+
+PkgConfigBR:
+    - xorg-macros
+    - xproto
+    - x11
+    - xextproto
+    - xau
+Configure: reconfigure
+SubPackages:
+    - Name: devel
+      Summary: Development components for the libXext library
+      Group: Development/Libraries
+
